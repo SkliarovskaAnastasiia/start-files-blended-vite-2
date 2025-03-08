@@ -17,6 +17,11 @@ const Photos = () => {
 
   const getQuery = value => {
     setQuery(value);
+    setImages([]);
+    setPage(1);
+    setError(null);
+    setIsEmpty(false);
+    loadMore(false);
   };
 
   useEffect(() => {

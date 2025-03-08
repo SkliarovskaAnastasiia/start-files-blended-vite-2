@@ -62,7 +62,11 @@ const Photos = () => {
       {error && <Text textAlign="center">Something went wrong!</Text>}
       {images.length > 0 && <PhotosGallery images={images} />}
       {isEmpty && <Text textAlign="center">Nothing found!</Text>}
-      {loadMore && <Button onClick={handleBtnClick}>Load More</Button>}
+      {loadMore && (
+        <Button onClick={handleBtnClick} disabled={loading}>
+          Load More
+        </Button>
+      )}
     </>
   );
 };
